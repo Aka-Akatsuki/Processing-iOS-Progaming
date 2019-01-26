@@ -1,0 +1,60 @@
+// ver.1.1  Test Coding 
+
+var snowcolor;
+var snowR;
+var y;
+
+
+class Snow {
+   var Speed;
+   var sx;
+   var sy;
+   var fai;
+   
+   Snow () {
+      Speed = 1;
+      sy = 0;
+      sx = 130;
+      fai = 2;
+   }
+   
+   void snowDraw() {
+      ellipse(sx,sy,fai,fai);
+      sy += random(Speed);
+      sx += random(-1*Speed,Speed);
+   } 
+   
+}
+
+
+Snow mySnow = new Snow();
+
+void setup() {
+   size(screen.width, screen.height);
+   snowcolor = 200;
+   //frameRate(30);
+   y = 0;
+   snowR = 5;
+   snowspeed = 3;
+   
+}
+
+void draw() {
+   //background(0,0,0);
+   
+   stroke(snowcolor); 
+   fill(snowcolor);
+   /*for(int y=0;y<height;y+=10) {
+      background(0,0,0);
+      ellipse(100,y,10,10);
+   }
+   */
+   background(0,0,0);
+   
+   mySnow.snowDraw();
+   
+   ellipse(100,y,snowR,snowR);
+   y+=snowspeed;
+   
+   
+}
