@@ -1,5 +1,6 @@
 // ver.1.1  Test Coding 
 
+
  var snowcolor;
  var snowR;
  var y;
